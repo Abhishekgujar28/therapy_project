@@ -1,41 +1,78 @@
+'use client';
 import Image from 'next/image';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const specialties = [
   {
-    title: "Self-Esteem",
-    desc: "Building a strong sense of self-worth is key to living a fulfilling life. Let's work together to boost your self-esteem.",
-    img: "https://images.squarespace-cdn.com/content/v1/65d10c6adcfabe1819ed4e07/166607b6-21a7-4e30-8c74-9c911c9f33fb/milles-studio-GU-Q4-SQFTg-unsplash.jpg?format=1000w"
+    title: "Anxiety Therapy  ",
+    desc: " Short text: Practical tools to calm your nervous system, reduce overthinking, and feel more grounded in daily life..",
+    img: " https://images.everydayhealth.com/images/2025-gateway-illustrations/eh-anxiety-disorders-gg-1440x810.png?w=508"
   },
   {
-    title: "Relationships",
-    desc: "Navigating relationships can be complex. I'm here to guide you through these intricacies to help you find healthier connections.",
-    img: "https://images.squarespace-cdn.com/content/v1/65d10c6adcfabe1819ed4e07/f53aed66-5bd9-43e0-b00b-3a3537fed68d/ori-song-LPbKfdQJS2E-unsplash.jpg?format=750w"
+    title: "Trauma Therapy",
+    desc: "Short text: Compassionate, evidence-based therapy to help you process trauma and restore a sense of safety and control..",
+    img: "https://i.pinimg.com/736x/ee/a6/1b/eea61ba33c75b38b2c80db3b53ffb0e3.jpg"
   },
   {
-    title: "Burnout",
-    desc: "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
-    img: "https://images.squarespace-cdn.com/content/v1/65d10c6adcfabe1819ed4e07/515651b9-4001-47ae-8ca1-2a6ff8f2bef0/ivana-cajina--wn1PECo5-U-unsplash.jpg?format=750w"
+    title: "Burnout & Perfectionism",
+    desc: "Short text: Support for chronic stress, burnout, and self-pressure so you can build healthier limits and a more sustainable life..",
+    img: " https://i.pinimg.com/736x/1b/aa/f1/1baaf1180eb7c8e5ebbd0d319a137d6f.jpg"
   }
 ];
 
 export default function Specialties() {
+  const containerRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 75%",
+        end: "bottom 25%",
+        toggleActions: "play none none reverse",
+      }
+    });
+
+    tl.from(titleRef.current, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    })
+    .from(cardsRef.current?.children || [], {
+      y: 100,
+      opacity: 1,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power3.out"
+    }, "-=0.5");
+
+  }, { scope: containerRef });
+
   return (
-    <section className="w-full px-6 md:px-10 lg:px-14 py-16 md:py-24 bg-[#fbf6f1]">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-6xl font-sans text-[#223614] font-medium ">My Specialties</h2>
+    <section ref={containerRef} className="w-full px-6 md:px-10 lg:px-14 py-16 md:py-24 md:mb-24 bg-bgMain">
+      <div className="text-center mb-">
+        <h2 ref={titleRef} className="text-4xl md:text-5xl lg:text-6xl font-sans text-textPrimary font-medium ">My Specialties</h2>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         {specialties.map((item, index) => (
-          <div key={index} className="bg-[#e5e0da] px-6 pt-3 pb-8n flex flex-col h-full relative overflow-hidden group border border-3-black duration-300">
-            <h3 className="text-lg  font-bold text-mono mb-4 uppercase tracking-wider">{item.title}</h3>
-            <p className="text-xs md:text-sm text-[#223614] leading-relaxed mb-12 relative z-10">
+          <div key={index} className="bg-bgCard px-6 pt-8 pb-12 flex flex-col h-full relative overflow-hidden group border-1 border-gray-600 duration-300 rounded-lg">
+            <h3 className="text-2xl md:text-xl font-serif text-textPrimary mb-6 uppercase tracking-wider">{item.title}</h3>
+            <p className="text-lg md:text-base text-textBody leading-relaxed mb-12 relative z-10">
               {item.desc}
             </p>
             
             {/* Circular Image at bottom */}
-            <div className="mt-auto self-center relative w-82 h-82 rounded-full overflow-hidden   shadow-sm">
-               <div className="w-full h-full bg-gray-300 relative">
+            <div className="mt-auto self-center relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden ">
+               <div className="w-full h-full bg-bgSection relative">
                  <Image 
                    src={item.img} 
                    alt={item.title}

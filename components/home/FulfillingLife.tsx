@@ -1,33 +1,67 @@
 
+'use client';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function FulfillingLife() {
+  const containerRef = useRef<HTMLElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      }
+    });
+
+    tl.from(textRef.current, {
+      x: -50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    })
+    .from(imageRef.current, {
+      x: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    }, "-=0.5");
+    
+  }, { scope: containerRef });
+
   return (
-    <section className="w-full grid grid-cols-1 md:grid-cols-2   text-[#2e3525]">
+    <section ref={containerRef} className=" bg-bgMain overflow-hidden w-full grid grid-cols-1 md:grid-cols-2   text-textPrimary">
       {/* Left: Text */}
-      <div className="px-6 md:px-12 lg:px-14 py-20 md:py-32 flex flex-col justify-between h-full bg-[#e5e0da]">
-        <div className="flex flex-col justify-center  space-y-10">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans text-[#2e3525]">
-            Live a fulfilling life.
+      <div ref={textRef} className="px-6 md:px-12 lg:px-14 py-20 md:py-32  flex flex-col justify-between h-full bg-bgAccent">
+        <div className="flex flex-col justify-center  space-y-10 ">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans text-textPrimary">
+          You don’t have to carry this alone.
           </h2>
-          <div className="space-y-4 text-[#2e3525] leading-relaxed max-w-full font-sans text-base md:text-xl">
+          <div className="space-y-4 text-textPrimary leading-relaxed max-w-full font-sans text-base md:text-xl">
             <p>
-              Life can be challenging—especially when you’re trying to balance your personal and professional life.
-            </p>
+            Life can feel overwhelming when stress, anxiety, or constant pressure start to pile up  </p>
             <p>
-              It’s easy to feel like you’re alone in facing these challenges, but I want you to know that I’m here to help.
-            </p>
+             Therapy can be a space to slow down, feel supported, and work through challenges in a way that feels steady and manageable.  </p>
           </div>
         </div>
         
-        <div className="w-full border-t border-[#2e3525]/30 pt-8 mt-16 text-center">
-           <button className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase hover:opacity-70 flex items-center justify-center gap-2 transition-opacity mx-auto text-[#2e3525]">
+        <div className="w-full border-t border-textPrimary/30 pt-8 mt-16 text-center cursor-pointer">
+           <button className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase hover:opacity-70 flex items-center justify-center gap-2 transition-opacity mx-auto text-textPrimary">
             Get In Touch <span>&rarr;</span>
            </button>
         </div>
       </div>
       
       {/* Right: Image */}
-      <div className="relative h-64 md:h-auto min-h-[500px] bg-gray-200">
-         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.squarespace-cdn.com/content/v1/65d10c6adcfabe1819ed4e07/87fa2310-36df-4a24-a9e9-1b74df73f150/tanya-trukyr-ornZV1YJNNo-unsplash.jpg?format=2500w')" }}></div>
+      <div ref={imageRef} className="relative h-64 md:h-auto min-h-[500px] bg-bgSection">
+         <div className="absolute inset-0 bg-fit bg-center" style={{ backgroundImage: "url(' https://i.pinimg.com/736x/71/c5/21/71c5217fb1e9a86b9a5fff800d166081.jpg')" }}></div>
       </div>
     </section>
   );

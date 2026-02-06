@@ -1,21 +1,54 @@
-import React from 'react';
+"use client";
+import React, { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const BookingSection = () => {
+  const containerRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      }
+    });
+
+    tl.from(titleRef.current, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    })
+    .from(formRef.current, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    }, "-=0.5");
+  }, { scope: containerRef });
+
   return (
-    <section className="bg-[#e5e0da] py-24 px-6 text-center">
-       <h2 className="text-3xl md:text-6xl font-medium mb-6">Book an appointment.</h2>
-       <p className="max-w-xl mx-auto mb-16 text-sm md:text-base text-start">
+    <section ref={containerRef} className="bg-bgMain py-24 px-6 text-center">
+       <h2 ref={titleRef} className="text-3xl md:text-6xl font-serif font-medium mb-6 text-textPrimary">Contact Me.</h2>
+       <p className="max-w-xl mx-auto mb-16 text-sm md:text-base text-start text-textBody font-sans">
          Add some text here if you like, and add your scheduling widget below (you
          can get one by signing up for a scheduling account through
          Squarespace, the top-tier plan is HIPAA compliant OR you can use your
          client portal).
        </p>
-       <div className=" p-8 max-w-xl mx-auto text-left">
+       <div ref={formRef} className="p-8 max-w-xl mx-auto text-left">
         <form className="space-y-6">
           <div>
             <label
               htmlFor="name"
-              className="block text-base font-[#223614] font-medium text-mb-3"
+              className="block text-base font-serif font-medium text-textPrimary mb-3"
             >
               Name
             </label>
@@ -23,7 +56,7 @@ const BookingSection = () => {
               type="text"
               id="name"
               name="name"
-              className="w-full border border-[#223614] px-4 py-3 focus:outline-none focus:border-gray-500 transition-colors bg-transparent"
+              className="w-full border-b border-textPrimary/50 px-4 py-3 focus:outline-none focus:border-primary focus:bg-white/50 transition-all bg-transparent text-textPrimary font-sans"
               placeholder="Your Name"
               required
             />
@@ -32,7 +65,7 @@ const BookingSection = () => {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-[#223614] mb-1"
+              className="block text-base font-serif font-medium text-textPrimary mb-3"
             >
               Email Address
             </label>
@@ -40,7 +73,7 @@ const BookingSection = () => {
               type="email"
               id="email"
               name="email"
-              className="w-full border border-[#223614] px-4 py-3 focus:outline-none focus:border-gray-500 transition-colors bg-transparent"
+              className="w-full border-b border-textPrimary/50 px-4 py-3 focus:outline-none focus:border-primary focus:bg-white/50 transition-all bg-transparent text-textPrimary font-sans"
               placeholder="email@example.com"
               required
             />
@@ -49,7 +82,7 @@ const BookingSection = () => {
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-[#223614] mb-1"
+              className="block text-base font-serif font-medium text-textPrimary mb-3"
             >
               How can we help?
             </label>
@@ -57,7 +90,7 @@ const BookingSection = () => {
               id="message"
               name="message"
               rows={4}
-              className="w-full border border-[#223614] px-4 py-3 focus:outline-none focus:border-gray-500 transition-colors bg-transparent resize-none"
+              className="w-full border-b border-textPrimary/50 px-4 py-3 focus:outline-none focus:border-primary focus:bg-white/50 transition-all bg-transparent resize-none text-textPrimary font-sans"
               placeholder="Tell us a bit about what you're looking for..."
               required
             />
@@ -66,7 +99,7 @@ const BookingSection = () => {
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full bg-[#223614] text-white px-8 py-4 text-xs uppercase tracking-widest font-bold hover:bg-[#314720] transition-colors"
+              className="w-full cursor-pointer bg-buttonPrimary text-white px-8 py-4 text-xs uppercase tracking-widest font-bold hover:bg-buttonPrimaryHover transition-colors"
             >
               Submit
             </button>

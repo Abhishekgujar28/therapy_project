@@ -1,12 +1,44 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
 import Script from 'next/script';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const OfficeSection = () => {
+  const containerRef = useRef(null);
+  const textRef = useRef(null);
+  const mapContainerRef = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      }
+    });
+
+    tl.from(textRef.current, {
+      x: -50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    })
+    .from(mapContainerRef.current, {
+      x: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    }, "-=0.8");
+  }, { scope: containerRef });
+
   return (
-    <section className="bg-[#7e7b46] w-full">
+    <section ref={containerRef} className="bg-primary w-full">
       <div className="flex flex-col md:flex-row min-h-[500px] items-stretch">
-        <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
+        <div ref={textRef} className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
           <div className="mb-12">
             <h3 className="text-5xl font-medium mb-4 text-white">My Office</h3>
             <p className="text-white leading-relaxed text-lg">123 Example Street<br/>Minneapolis, MN</p>
@@ -16,7 +48,7 @@ const OfficeSection = () => {
             <p className="text-white leading-relaxed text-lg">Monday – Friday<br/>10am – 6pm</p>
           </div>
         </div>
-        <div className="w-full md:w-1/2 md:min-h-[50px] p-6 md:p-10">
+        <div ref={mapContainerRef} className="w-full md:w-1/2 md:min-h-[50px] p-6 md:p-10">
           <LeafletMapPane />
         </div>
       </div>

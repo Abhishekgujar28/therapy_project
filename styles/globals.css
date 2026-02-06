@@ -2,17 +2,24 @@
 @config "../tailwind.config.ts";
 
 :root {
-  --primary-green: #223614;
+  --primary-green: #6F7DB8;
+  --bg-color: #F7F5F2;
 }
 
 @layer base {
   body {
-    @apply antialiased;
-    font-family: var(--font-gopher), sans-serif;
-    color: var(--primary-green);
+    @apply antialiased bg-bgMain text-textPrimary font-sans leading-relaxed tracking-wide;
   }
   
-  h1, h2, h3, h4, h5, h6, p, a, span, div, li {
-    color: var(--primary-green);
+  h1, h2, h3 {
+    @apply font-serif text-textPrimary leading-tight tracking-normal;
+  }
+  
+  h4, h5, h6, a, div, li {
+    @apply text-textPrimary;
+  }
+  
+  p, span {
+    @apply text-textBody;
   }
 }

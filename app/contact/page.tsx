@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 export default function ContactPage() {
   return (
     <main className="min-h-screen font-sans">
-      <div className="bg-[#c2bfcb] pb-12">
+      <div className="bg-primarySoft pb-12">
         <ContactHero />
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-0 pb-24">
            <div className="flex flex-col lg:flex-row gap-16 items-start">
@@ -24,7 +24,6 @@ export default function ContactPage() {
       </div>
       
       <BookingSection />
-      <OfficeSection />
       <SocialGallery />
       {/* <Footer/> */}
     </main>

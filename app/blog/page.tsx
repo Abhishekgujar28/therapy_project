@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen flex flex-col bg-[#fbf6f1]">
+    <main className="min-h-screen flex flex-col bg-bgMain">
        
       <BlogHero />
       <BlogGrid />

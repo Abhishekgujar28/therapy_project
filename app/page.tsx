@@ -27,7 +27,7 @@ const CTA = dynamic(() => import("@/components/home/CTA"), {
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col bg-[#fbf6f1]">
+    <main className="min-h-screen overflow-hidden flex flex-col bg-bgMain">
       <Hero />
       <FulfillingLife />
       <Specialties />

@@ -8,18 +8,41 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#2E3525",
-        "primary-light": "#858864",
-        cream: "#F3F0EA",
-        lavender: "#DCD6E5",
-        "footer-bg": "#5F6137",
-      },
-      fontFamily: {
-        sans: ["var(--font-lato)", "sans-serif"],
-        serif: ["var(--font-playfair)", "serif"],
-      },
+        // Background layers
+        bgMain: '#FBF8F6',     // warm pearl
+        bgSection: '#F3EDE9',  // soft linen
+        bgCard: '#FFFFFF',    // clean cards
+        bgSoft: '#EFE4DF',    // blush fog
+        bgAccent: '#F7E2DA',  // soft peach accent sections
+
+        // Text
+        textPrimary: '#2B2422', // warm charcoal
+        textBody: '#4A3F3B',
+        textMuted: '#8A7F7A',
+
+        // Brand
+        primary: '#8C5A6A',      // muted plum-rose (signature)
+        primaryHover: '#744B58',
+        primarySoft: '#E3C9D0',
+
+        // Accent
+        accent: '#D6A38B',       // soft terracotta-peach
+        accentSoft: '#F1D8CD',
+
+        // Buttons
+        buttonPrimary: '#8C5A6A',
+        buttonPrimaryHover: '#744B58',
+        buttonSecondary: '#D6A38B',
+
+        // Footer
+        footerBg: '#2B2422',
+        footerText: '#FBF8F6',
+      }
+
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
 export default config;
