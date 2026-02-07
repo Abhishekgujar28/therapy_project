@@ -11,7 +11,7 @@ const specialties = [
   {
     title: "Anxiety Therapy  ",
     desc: " Short text: Practical tools to calm your nervous system, reduce overthinking, and feel more grounded in daily life..",
-    img: " https://images.everydayhealth.com/images/2025-gateway-illustrations/eh-anxiety-disorders-gg-1440x810.png?w=508"
+    img: "/burnout.png"
   },
   {
     title: "Trauma Therapy",
@@ -21,7 +21,7 @@ const specialties = [
   {
     title: "Burnout & Perfectionism",
     desc: "Short text: Support for chronic stress, burnout, and self-pressure so you can build healthier limits and a more sustainable life..",
-    img: " https://i.pinimg.com/736x/1b/aa/f1/1baaf1180eb7c8e5ebbd0d319a137d6f.jpg"
+    img: "/anxiety.png"
   }
 ];
 
