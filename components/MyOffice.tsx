@@ -31,25 +31,25 @@ const MyOffice = () => {
       duration: 1,
       ease: "power3.out"
     })
-    .from(textRef.current, {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out"
-    }, "-=0.5")
-    .from(mapRef.current, {
-      scale: 0.9,
-      opacity: 0,
-      duration: 1,
-      ease: "back.out(1.7)"
-    }, "-=0.3")
-    .from(imagesRef.current?.children || [], {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power3.out"
-    }, "-=0.5");
+      .from(textRef.current, {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+      }, "-=0.5")
+      .from(mapRef.current, {
+        scale: 0.9,
+        opacity: 0,
+        duration: 1,
+        ease: "back.out(1.7)"
+      }, "-=0.3")
+      .from(imagesRef.current?.children || [], {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out"
+      }, "-=0.5");
 
   }, { scope: containerRef });
 
@@ -63,11 +63,11 @@ const MyOffice = () => {
           </h1>
           <div ref={textRef} className="text-lg md:text-xl text-textBody max-w-3xl leading-relaxed space-y-4">
             <p>
-              Welcome to a space designed for healing and growth. My office is located in the heart of Minneapolis, 
+              Welcome to a space designed for healing and growth. My office is located in the heart of Minneapolis,
               offering a calm and confidential environment where you can feel safe to explore your thoughts and feelings.
             </p>
             <p>
-              Whether you are coming in for a consultation or a regular session, I strive to make every visit comfortable 
+              Whether you are coming in for a consultation or a regular session, I strive to make every visit comfortable
               and welcoming. Below you can find the exact location and some glimpses of the interior.
             </p>
           </div>
@@ -75,22 +75,25 @@ const MyOffice = () => {
 
         {/* Live Location (Map) */}
         <div ref={mapRef} className="mb-24">
-           <h2 className="text-3xl font-serif text-textPrimary mb-8">Location</h2>
-           <div className="flex flex-col md:flex-row gap-8 items-start">
-              <div className="w-full md:w-1/3 space-y-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-textPrimary mb-2">Address</h3>
-                    <p className="text-textBody">123 Example Street<br/>Minneapolis, MN</p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-textPrimary mb-2">Hours</h3>
-                    <p className="text-textBody">Monday – Friday<br/>10am – 6pm</p>
-                  </div>
+          <h2 className="text-3xl font-serif text-textPrimary mb-8">Location</h2>
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="w-full md:w-1/3 space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-textPrimary mb-2">Address</h3>
+                <p className="text-textBody"> 123th Street 45  W, 1<br />
+                  Santa Monica, CA 9040</p>
+
+
               </div>
-              <div className="w-full md:w-2/3">
-                 <LeafletMapPane />
+              <div>
+                <h3 className="text-xl font-bold text-textPrimary mb-2">Hours</h3>
+                <p className="text-textBody">Monday – Friday<br />10am – 6pm</p>
               </div>
-           </div>
+            </div>
+            <div className="w-full md:w-2/3">
+              <LeafletMapPane />
+            </div>
+          </div>
         </div>
 
         {/* Images Section */}
@@ -98,17 +101,17 @@ const MyOffice = () => {
           <h2 className="text-3xl font-serif text-textPrimary mb-8">Gallery</h2>
           <div ref={imagesRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <Image 
-                src="/office1.jpeg" 
-                alt="Office Interior 1" 
+              <Image
+                src="/office1.jpeg"
+                alt="Office Interior 1"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <Image 
-                src="/office2.jpeg" 
-                alt="Office Interior 2" 
+              <Image
+                src="/office2.jpeg"
+                alt="Office Interior 2"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -127,7 +130,7 @@ function LeafletMapPane() {
     const init = () => {
       const L = (window as any).L;
       if (!L || !mapRef.current) return;
-      
+
       // Check if map is already initialized
       if ((mapRef.current as any)._leaflet_id) return;
 
@@ -141,18 +144,18 @@ function LeafletMapPane() {
           '&copy; OpenStreetMap contributors &copy; CARTO',
         maxZoom: 19,
       }).addTo(map);
-      L.marker([44.9778, -93.2650]).addTo(map);
+      L.marker([34.024212, -118.496475]).addTo(map);
     };
 
     const onLoad = () => init();
-    
+
     // If Leaflet is already loaded
     if ((window as any).L) {
-        init();
+      init();
     } else {
-        window.addEventListener('leaflet-loaded', onLoad);
+      window.addEventListener('leaflet-loaded', onLoad);
     }
-    
+
     return () => window.removeEventListener('leaflet-loaded', onLoad);
   }, []);
 
