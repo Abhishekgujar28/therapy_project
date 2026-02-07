@@ -10,48 +10,62 @@ export type Blog = {
 export const blogPosts: Blog[] = [
   {
     id: 1,
-    title: "Blog Post One",
-    date: "01/19/19",
+    title: "Understanding Anxiety: Why Your Mind and Body Feel Stuck on High Alert",
+    date: "02/01/2026",
     image:
-      "https://images.unsplash.com/photo-1499750310159-5b5f38e3163a?q=80&w=2000&auto=format&fit=crop",
-    slug: "blog-post-one",
-    content: `It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop",
+    slug: "understanding-anxiety-mind-body",
+    content: `Anxiety is more than just worrying too much. For many people, it feels like their nervous system is constantly on high alert. Your mind may race, your chest may feel tight, your stomach uneasy, and sleep can become difficult. Even when life looks “fine” on the outside, your body might still be acting as if something is about to go wrong.
 
-Don't worry about sounding professional. Sound like you. There are over 1.5 billion websites out there, but your story is what's going to separate this one from the rest. If you read the words back and don't hear your own voice in your head, that's a good sign you still have more work to do.
+This happens because anxiety is not only a mental experience—it is also a physical one. Your brain and nervous system are designed to protect you from danger. But when stress, past experiences, or long-term pressure build up, this system can become overactive. Suddenly, everyday situations start to feel overwhelming.
 
-Be clear, be confident and don't overthink it. The beauty of your story is that it's going to continue to evolve and your site can evolve with it. Your goal should be to make it feel right for right now. Later will take care of itself. It always does.`,
+In therapy, we work on understanding what triggers your anxiety and how your body responds to it. This includes learning practical tools to calm your nervous system, reduce overthinking, and create a greater sense of safety in your daily life. Over time, anxiety doesn’t have to control your decisions, your sleep, or your relationships.
+
+The goal is not to eliminate stress completely—that’s impossible. The goal is to help your mind and body learn that you are safe again, so you can respond to life with more balance and confidence.`,
   },
   {
     id: 2,
-    title: "Blog Post Two",
-    date: "01/19/19",
+    title: "What Is Trauma and How Does It Affect Everyday Life?",
+    date: "02/05/2026",
     image:
-      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=2000&auto=format&fit=crop",
-    slug: "blog-post-two",
-    content: `This is the content for Blog Post Two. It has different content than the first post.
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop",
+    slug: "what-is-trauma-and-how-it-affects-life",
+    content: `Trauma is not only about what happened to you—it’s also about how your nervous system learned to survive it. Some people experience trauma after a single overwhelming event, while others develop it after years of chronic stress, difficult relationships, or growing up in an unsafe environment.
 
-Here we can discuss different topics, ideas, or share different stories. The key is that each post has its own unique URL and content.`,
+You might notice trauma showing up as anxiety, emotional numbness, difficulty trusting others, sudden mood shifts, or a constant feeling of being on edge. Many people say they feel “stuck” in patterns they don’t fully understand, even though the original event is long over.
+
+Trauma therapy focuses on helping your body and mind process these experiences in a safe and controlled way. This doesn’t mean reliving everything in detail. It means gently helping your nervous system learn that the danger is no longer happening.
+
+With the right support, people often notice they feel more grounded, more present, and more in control of their reactions. Healing from trauma is not about erasing the past—it’s about no longer letting the past control your present.`,
   },
   {
     id: 3,
-    title: "Blog Post Three",
-    date: "01/19/19",
+    title: "How EMDR Therapy Helps the Brain Heal From Stress and Trauma",
+    date: "02/10/2026",
     image:
-      "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=2000&auto=format&fit=crop",
-    slug: "blog-post-three",
-    content: `Welcome to Blog Post Three. Nature is a common theme in our placeholder images, so let's talk about nature.
+      "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=2000&auto=format&fit=crop",
+    slug: "how-emdr-therapy-helps-heal",
+    content: `EMDR (Eye Movement Desensitization and Reprocessing) is a well-researched therapy approach used to treat trauma, anxiety, and distressing memories. The idea behind EMDR is that your brain already knows how to heal—but sometimes it gets stuck.
 
-Nature allows us to disconnect from the digital world and reconnect with ourselves.`,
+When something overwhelming happens, the memory can stay “frozen” in your nervous system. Even years later, your body may react as if the event is still happening. EMDR helps the brain reprocess these memories so they become less intense and less disruptive.
+
+During EMDR, you focus on specific memories while engaging in gentle bilateral stimulation, such as guided eye movements. This process helps the brain reorganize how the memory is stored. Over time, many people notice that the emotional charge around painful experiences fades.
+
+EMDR is not about forcing yourself to forget. It’s about helping your brain file away experiences properly, so they no longer hijack your emotions, reactions, or sense of safety.`,
   },
   {
     id: 4,
-    title: "Blog Post Four",
-    date: "01/19/19",
+    title: "Burnout: When Pushing Through Life Stops Working",
+    date: "02/15/2026",
     image:
-      "https://images.unsplash.com/photo-1526746323145-5ac81d598585?q=80&w=2000&auto=format&fit=crop",
-    slug: "blog-post-four",
-    content: `And finally, Blog Post Four. This post concludes our sample data.
+      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2000&auto=format&fit=crop",
+    slug: "burnout-when-pushing-through-stops-working",
+    content: `Burnout often shows up quietly. You may still be functioning—going to work, meeting deadlines, taking care of responsibilities—but inside you feel exhausted, disconnected, or emotionally flat. Things that used to matter may start to feel heavy or pointless.
 
-Hopefully, this demonstrates how dynamic routing works in Next.js.`,
+Many high-achieving people experience burnout after years of ignoring their own limits. The body and mind can only stay in “survival mode” for so long before they start sending stronger signals that something needs to change.
+
+Therapy for burnout is not just about stress management tips. It’s about understanding why rest feels so hard, why you keep pushing past your limits, and how to build a more sustainable way of living and working.
+
+With support, people often rediscover a sense of energy, clarity, and connection—not by doing more, but by learning how to listen to themselves again and respond with more care and balance.`,
   },
 ];

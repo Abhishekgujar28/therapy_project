@@ -44,8 +44,8 @@ export default function About() {
  <div ref={imageRef} className=" lg:hidden  relative w-full max-w-[250px] mx-auto md:max-w-md">
          {/* Arched Image */}
          <div className="aspect-[3/4] relative z-10">
-            <div className="absolute inset-0 rounded-t-[10rem] md:rounded-t-[12rem] overflow-hidden bg-bgSection shadow-xl">
-                <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1470058869958-2a77ade41c02?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div className="absolute inset-0 rounded-t-[10rem] md:rounded-t-[12rem] overflow-hidden bg-bgSection ">
+                <div className="w-full h-full bg-[url('/dr.png')] bg-cover bg-center"></div>
             </div>
          </div>
          

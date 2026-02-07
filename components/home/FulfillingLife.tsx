@@ -61,7 +61,7 @@ export default function FulfillingLife() {
       
       {/* Right: Image */}
       <div ref={imageRef} className="relative h-64 md:h-auto min-h-[500px] bg-bgSection">
-         <div className="absolute inset-0 bg-fit bg-center" style={{ backgroundImage: "url(' https://i.pinimg.com/736x/71/c5/21/71c5217fb1e9a86b9a5fff800d166081.jpg')" }}></div>
+         <div className="absolute inset-0 bg-fit bg-center" style={{ backgroundImage: "url(' https://i.pinimg.com/736x/be/85/84/be8584386591cc452ada346c46d3c68f.jpg')" }}></div>
       </div>
     </section>
   );

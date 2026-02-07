@@ -40,7 +40,7 @@ export default function NotAlone() {
     <section ref={containerRef} className=" overflow-hidden w-full grid grid-cols-1 md:grid-cols-2 ">
       {/* Left: Image (Order 2 on mobile, Order 1 on desktop) */}
       <div ref={imageRef} className="relative h-64 md:h-auto min-h-[300px] lg:min-h-[700px] bg-bgAccent order-1 md:order-1">
-        <div className="absolute inset-0 bg-cover bg-center opacity-90" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1521684371941-49ffb6075d47?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJyb3dufGVufDB8fDB8fHww')" }}></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-90" style={{ backgroundImage: "url(' https://plus.unsplash.com/premium_photo-1705628041832-8a35ae9b4f93?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}></div>
       </div>
 
 

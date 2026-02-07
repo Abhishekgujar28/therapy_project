@@ -52,7 +52,7 @@ export default function FAQ() {
            <div className="w-full h-full bg-bgSection flex items-center justify-center text-textMuted">
              <span className="sr-only">Hero Image: Woman with flowers</span>
              {/* Simulating image content */}
-             <div className="w-full h-full bg-cover bg-center opacity-90" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop')" }}></div>
+             <div className="w-full h-full bg-cover bg-center opacity-90" style={{ backgroundImage: "url(' https://images.unsplash.com/photo-1616593437252-0631aeb95590?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHF1ZXN0aW9ufGVufDB8fDB8fHww')" }}></div>
            </div>
         </div>
       </div>

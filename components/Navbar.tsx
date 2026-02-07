@@ -81,31 +81,20 @@ export default function Navbar() {
         
         {/* Mobile/Tablet Layout (< lg) */}
         <div className="flex lg:hidden items-center justify-between">
-          {/* Left: Menu Button */}
-          <button 
-            onClick={() => setIsOpen(!isOpen)} 
-            className="z-50 relative flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
-            aria-label="Toggle Menu"
-          >
-            {isOpen ? (
-              // Cross Icon
-              <>
-                <span className="absolute w-8 h-0.5 bg-textPrimary rotate-45 transition-transform duration-300 ease-in-out"></span>
-                <span className="absolute w-8 h-0.5 bg-textPrimary -rotate-45 transition-transform duration-300 ease-in-out"></span>
-              </>
-            ) : (
-              // 2 Lines Hamburger
-              <>
-                <span className="w-8 h-0.5 bg-textPrimary block transition-all duration-300"></span>
-                <span className="w-8 h-0.5 bg-textPrimary block transition-all duration-300"></span>
-              </>
-            )}
-          </button>
-
-          {/* Right: Dr. Name (Small Text) */}
+          {/* Left: Dr. Name (Small Text) */}
           <div className="text-lg font-bold font-serif text-textPrimary tracking-tight z-50">
             <Link href="/">Dr. Maya Reynolds</Link>
           </div>
+
+          {/* Right: Menu Button */}
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="z-50 relative flex flex-col justify-center items-center w-8 h-8 gap-2 focus:outline-none group"
+            aria-label="Toggle Menu"
+          >
+            <span className={`w-8 h-0.5 bg-textPrimary block transition-all duration-300 ease-in-out transform origin-center ${isOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+            <span className={`w-8 h-0.5 bg-textPrimary block transition-all duration-300 ease-in-out transform origin-center ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
+          </button>
         </div>
 
         {/* Desktop Layout (>= lg) */}
@@ -129,14 +118,14 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <div 
         ref={menuRef}
-        className={`fixed inset-0 w-full h-screen bg-bgMain z-40 flex flex-col items-center justify-center space-y-8 translate-x-full opacity-0`}
+        className={` inset-0 w-full h-screen bg-bgSection z-40 flex flex-col items-center justify-center space-y-8 translate-x-full opacity-0`}
         style={{ display: 'none' }}
       >
-        <Link href="/" className="menu-item text-4xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>Home</Link>
-        <Link href="/about" className="menu-item text-4xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>About</Link>
-        <Link href="/blog" className="menu-item text-4xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>Blog</Link>
-        <Link href="/my-office" className="menu-item text-4xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>My Office</Link>
-        <Link href="/contact" className="menu-item text-4xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>Contact</Link>
+        <Link href="/" className="menu-item text-5xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>Home</Link>
+        <Link href="/about" className="menu-item text-5xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>About</Link>
+        <Link href="/blog" className="menu-item text-5xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>Blog</Link>
+        <Link href="/my-office" className="menu-item text-5xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>My Office</Link>
+        <Link href="/contact" className="menu-item text-5xl font-serif text-textPrimary hover:opacity-70 transition-opacity" onClick={() => setIsOpen(false)}>Contact</Link>
       </div>
     </nav>
   );

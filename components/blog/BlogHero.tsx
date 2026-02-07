@@ -32,9 +32,9 @@ const BlogHero = () => {
   return (
     <section ref={containerRef} className="bg-bgMain">
       <div className="max-w-8xl mx-auto px-6 md:px-12 lg:px-38 py-16 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-0 ">
-        <div ref={imageRef} className="relative w-[470px] h-[420px] md:h-[780px] overflow-hidden rounded-t-[380px]">
+        <div ref={imageRef} className="relative w-[230px] h-[320px] md:h-[780px] lg:w-[530px] overflow-hidden rounded-t-[380px] mx-auto ">
           <img
-            src="https://images.unsplash.com/photo-1544367563-12123d8965cd?q=80&w=2070&auto=format&fit=crop"
+            src="https://i.pinimg.com/1200x/d2/7b/0d/d27b0dd34c0cb828905bbd4dba89194f.jpg"
             alt="Reading with tea"
             className="w-full h-full object-cover"
           />
