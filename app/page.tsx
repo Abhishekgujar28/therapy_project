@@ -1,4 +1,6 @@
-"use client";
+
+'use client';
+
 import dynamic from "next/dynamic";
 import Hero from "@/components/home/Hero";
 import FulfillingLife from "@/components/home/FulfillingLife";

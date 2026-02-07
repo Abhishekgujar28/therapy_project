@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import AboutPageContent from "@/components/about/AboutPageContent";
 
 export const metadata: Metadata = {
-  title: "Trauma & Anxiety Therapist Santa Monica | Dr. Maya Reynolds",
-  description: "Dr. Maya Reynolds offers anxiety therapy, EMDR, and trauma counseling in Santa Monica & online in California. Reclaim your calm and overcome burnout today.",
+  title: "About Dr. Maya Reynolds | Therapist Santa Monica",
+  description: "Learn more about Dr. Maya Reynolds, a compassionate Therapist Santa Monica specializing in anxiety, trauma, and helping you find your path to healing.",
 };
 
 export default function AboutPage() {

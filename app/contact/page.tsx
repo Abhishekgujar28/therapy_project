@@ -5,6 +5,12 @@ import BookingSection from '@/components/contact/BookingSection';
 import OfficeSection from '@/components/contact/OfficeSection';
 import SocialGallery from '@/components/contact/SocialGallery';
 import Footer from '@/components/Footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Contact Dr. Maya Reynolds |  Santa Monica Therapist",
+  description: "Get in touch to schedule a consultation or ask questions. Dr. Maya Reynolds is here to support you on your journey to wellness.",
+};
 
 export default function ContactPage() {
   return (

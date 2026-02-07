@@ -44,8 +44,8 @@ export default function Hero() {
       </div>
 
       {/* Right Column: Text */}
-      <div ref={textRef} className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:space-y-8 lg:pr-10 py- md:py-12 lg:py-32">
-        <h1 className="text-4xl md:text-6xl lg:text-[5rem] text-textPrimary font-serif leading-[1.1]">
+      <div ref={textRef} className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:space-y-8 lg:pr-10 py-10 md:py-12 lg:py-32">
+        <h1 className="text-4xl md:text-5xl lg:text-[5rem] text-textPrimary font-serif leading-[1.1]">
           {/* Live your life <br />  in full bloom */}
           find steadiness, clarity, <br className="hidden md:block" /> and room to breathe.
         </h1>

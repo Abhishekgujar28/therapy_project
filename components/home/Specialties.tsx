@@ -62,7 +62,7 @@ export default function Specialties() {
         <h2 ref={titleRef} className="text-4xl md:text-5xl lg:text-6xl font-sans text-textPrimary font-medium ">My Specialties</h2>
       </div>
       
-      <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {specialties.map((item, index) => (
           <div key={index} className="bg-bgCard px-6 pt-8 pb-12 flex flex-col h-full relative overflow-hidden group border-1 border-gray-600 duration-300 rounded-lg">
             <h3 className="text-2xl md:text-xl font-serif text-textPrimary mb-6 uppercase tracking-wider">{item.title}</h3>

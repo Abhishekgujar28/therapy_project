@@ -74,7 +74,7 @@ export default function NotAlone() {
         </p>
 
 
-        <div className="w-full border-t border-textPrimary py-6 text-center hover:bg-textPrimary hover:text-white relative bottom-[-160px] ">
+        <div className="w-full border-t border-textPrimary py-6 text-center hover:bg-textPrimary hover:text-white relative lg:bottom-[-160px] ">
           <button className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase hover:opacity-70 flex items-center justify-center gap-2 animate-pulse transition-all transition-opacity mx-auto ">
             work with me  <span>&rarr;</span>
           </button>

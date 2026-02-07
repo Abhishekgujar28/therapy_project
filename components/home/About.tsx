@@ -38,7 +38,7 @@ export default function About() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="w-full bg-bgSoft px-6 md:px-10 lg:px-32 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <section ref={containerRef} className="w-full bg-bgSoft px-6 md:px-10 lg:px-32 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center overflow-hidden">
       {/* Left: Text */}
 
  <div ref={imageRef} className=" lg:hidden  relative w-full max-w-[250px] mx-auto md:max-w-md">
