@@ -3,6 +3,7 @@ import { Playfair_Display, Montserrat } from "next/font/google";
 import "../styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dr. Maya Reynolds | Psychologist Minneapolis | Anxiety, Trauma & Burnout Therapy",
     description: "Licensed Clinical Psychologist in Minneapolis offering therapy for anxiety, panic, trauma, and burnout. Integrating CBT, EMDR, and mindfulness for high-achieving adults.",
-    url: "https://www.drmayareynolds.com", // Replace with actual domain
+    url: "https://maya-phyd.netlify.app/",  
     siteName: "Dr. Maya Reynolds Therapy",
     images: [
       {
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/",
   },
 };
 
@@ -60,6 +61,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${montserrat.variable} antialiased bg-bgMain text-textBody overflow-x-hidden`}
       >
+        <ScrollToTop />
         <Navbar />
         {children}
         <Footer />

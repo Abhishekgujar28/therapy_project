@@ -23,7 +23,7 @@ export default function ProfessionalBackground() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 75%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       }
     });
 

@@ -16,7 +16,7 @@ const BlogSubscribe = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 80%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       }
     });
 

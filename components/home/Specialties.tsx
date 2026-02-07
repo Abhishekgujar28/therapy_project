@@ -36,7 +36,7 @@ export default function Specialties() {
         trigger: containerRef.current,
         start: "top 75%",
         end: "bottom 25%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       }
     });
 

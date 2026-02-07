@@ -14,7 +14,7 @@ const ContactNoteBox = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 90%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
       y: 30,
       opacity: 0,

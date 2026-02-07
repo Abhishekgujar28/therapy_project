@@ -17,7 +17,7 @@ const BlogGrid = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 85%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
       y: 50,
       opacity: 0,
