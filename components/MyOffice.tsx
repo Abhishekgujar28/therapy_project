@@ -63,7 +63,7 @@ const MyOffice = () => {
           </h1>
           <div ref={textRef} className="text-lg md:text-xl text-textBody max-w-3xl leading-relaxed space-y-4">
             <p>
-              Welcome to a space designed for healing and growth. My office is located in the heart of Minneapolis,
+              Welcome to a space designed for healing and growth. My office is located in Santa Monica, California,
               offering a calm and confidential environment where you can feel safe to explore your thoughts and feelings.
             </p>
             <p>
@@ -135,7 +135,7 @@ function LeafletMapPane() {
       if ((mapRef.current as any)._leaflet_id) return;
 
       const map = L.map(mapRef.current, {
-        center: [44.9778, -93.2650],
+        center: [34.024212, -118.496475],
         zoom: 12,
         zoomControl: true,
       });

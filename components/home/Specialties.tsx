@@ -10,17 +10,17 @@ gsap.registerPlugin(ScrollTrigger);
 const specialties = [
   {
     title: "Anxiety Therapy  ",
-    desc: " Short text: Practical tools to calm your nervous system, reduce overthinking, and feel more grounded in daily life..",
+    desc: "  Practical tools to calm your nervous system, reduce overthinking, and feel more grounded in daily life..",
     img: "/burnout.png"
   },
   {
     title: "Trauma Therapy",
-    desc: "Short text: Compassionate, evidence-based therapy to help you process trauma and restore a sense of safety and control..",
+    desc: " Compassionate, evidence-based therapy to help you process trauma and restore a sense of safety and control..",
     img: "https://i.pinimg.com/736x/ee/a6/1b/eea61ba33c75b38b2c80db3b53ffb0e3.jpg"
   },
   {
     title: "Burnout & Perfectionism",
-    desc: "Short text: Support for chronic stress, burnout, and self-pressure so you can build healthier limits and a more sustainable life..",
+    desc: " Support for chronic stress, burnout, and self-pressure so you can build healthier limits and a more sustainable life..",
     img: "/anxiety.png"
   }
 ];
