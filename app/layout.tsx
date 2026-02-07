@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${montserrat.variable} antialiased bg-bgMain text-textBody`}
+        className={`${playfair.variable} ${montserrat.variable} antialiased bg-bgMain text-textBody overflow-x-hidden`}
       >
         <Navbar />
         {children}

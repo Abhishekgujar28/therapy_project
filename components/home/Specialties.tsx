@@ -57,7 +57,7 @@ export default function Specialties() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="w-full px-6 md:px-10 lg:px-14 py-16 md:py-24 md:mb-24 bg-bgMain">
+    <section ref={containerRef} className="w-full px-6 md:px-10 lg:px-14 py-16 md:py-24 md:mb-24 bg-bgMain overflow-hidden">
       <div className="text-center mb-">
         <h2 ref={titleRef} className="text-4xl md:text-5xl lg:text-6xl font-sans text-textPrimary font-medium ">My Specialties</h2>
       </div>

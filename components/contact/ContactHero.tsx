@@ -10,9 +10,10 @@ const ContactHero = () => {
   useGSAP(() => {
     gsap.from(titleRef.current, {
       y: 50,
-      opacity: 0,
+      autoAlpha: 0, // handles opacity + visibility
       duration: 1.2,
-      ease: "power3.out"
+      ease: "power3.out",
+      clearProps: "all" // ensure cleanup
     });
   }, { scope: containerRef });
 

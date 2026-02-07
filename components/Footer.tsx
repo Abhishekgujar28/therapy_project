@@ -10,19 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null);
 
-  useGSAP(() => {
-    gsap.from(footerRef.current, {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: footerRef.current,
-        start: "top 90%",
-        toggleActions: "play none none reverse",
-      }
-    });
-  }, { scope: footerRef });
-
   return (
     <footer ref={footerRef} className="w-full bg-footerBg text-footerText">
       {/* Top Section */}

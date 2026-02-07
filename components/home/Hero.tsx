@@ -30,7 +30,7 @@ export default function Hero() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className=" bg-bgMain w-full px-6 md:px-10 lg:px-14 pt-12 md:pt-20 lg:pt-14 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24  ">
+    <section ref={containerRef} className=" bg-bgMain w-full px-6 md:px-10 lg:px-14 pt-12 md:pt-20 lg:pt-14 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 overflow-x-hidden">
       {/* Left Column: Image (Based on PDF Visual) */}
       <div ref={imageRef} className="relative w-full aspect-[3/4] md:aspect-[2/3] max-w-[60%] md:max-w-none lg:max-w-[88%] mx-auto md:mr-12 ">
         <div className="absolute inset-0 bg-bgAccent rounded-t-[9rem] md:rounded-t-[18rem] overflow-hidden">
